@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{{ dump(categories) }}
+
+{% if categories %}
+    <ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    Pas de données
+{% endif %}
+
+{% endblock %}

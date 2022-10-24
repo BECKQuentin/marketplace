@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% if cities %}
+    <ul>
+    {% for city in cities %}
+        <li>{{ city.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    Pas de données
+{% endif %}
+
+{% endblock %}
